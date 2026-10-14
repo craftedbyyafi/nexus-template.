@@ -1,28 +1,28 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth overflow-x-hidden w-full">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Nexus - Modern SME & Business Agency Template</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-neutral-950 text-neutral-100 font-sans antialiased relative w-full overflow-x-hidden">
+<body class="bg-neutral-950 text-neutral-100 font-sans antialiased relative w-full max-w-full overflow-x-hidden">
 
-    <!-- #(Background Glow) - Dibungkus agar efek blur tidak merusak/melebarkan layar HP -->
-    <div class="absolute top-0 left-0 right-0 h-[500px] overflow-hidden pointer-events-none z-0">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[350px] sm:w-[600px] h-[250px] sm:h-[300px] bg-emerald-900/20 blur-[90px] sm:blur-[120px] rounded-full"></div>
+    <!-- Glow background wrapper that crops the area outside the screen. -->
+    <div class="absolute top-0 left-0 w-full h-[400px] overflow-hidden pointer-events-none z-0">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[280px] sm:w-[500px] h-[200px] sm:h-[300px] bg-emerald-900/20 blur-[80px] sm:blur-[120px] rounded-full"></div>
     </div>
 
     <!-- ==========================================
-         NAVIGATION BAR (EDIT LOGO & MENU HERE)
+         NAVIGATION BAR
          ========================================== -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-neutral-950/80 backdrop-blur-md border-b border-neutral-800/80">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
-            <!-- [EDIT]: Ubah teks logo brand di bawah ini -->
-            <a href="#" class="text-lg sm:text-xl font-bold tracking-wider uppercase shrink-0">Nexus.</a>
+    <header class="fixed top-0 left-0 right-0 z-50 bg-neutral-950/80 backdrop-blur-md border-b border-neutral-800/80 w-full max-w-full">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between w-full">
+            <!-- Logo Brand -->
+            <a href="#" class="text-base sm:text-xl font-bold tracking-wider uppercase shrink-0">Nexus.</a>
             
-            <!-- [EDIT]: Sesuaikan menu navigasi desktop (Tampil di Laptop/PC lg: 1024px+) -->
+            <!-- Menu Navigasi Desktop (Hanya Laptop/PC lg: 1024px+) -->
             <nav class="hidden lg:flex space-x-8 text-sm text-neutral-400">
                 <a href="#industries" class="hover:text-white transition">Industries</a>
                 <a href="#solutions" class="hover:text-white transition">Solutions</a>
@@ -30,11 +30,11 @@
                 <a href="#testimonials" class="hover:text-white transition">Testimonials</a>
             </nav>
 
-            <div class="flex items-center space-x-2 sm:space-x-4">
-                <!-- [EDIT]: Ubah link tombol CTA header di sini -->
-                <a href="#download" class="bg-white text-neutral-950 hover:bg-neutral-200 px-3.5 py-2 sm:px-5 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition whitespace-nowrap">Get Template</a>
+            <div class="flex items-center space-x-2 sm:space-x-4 shrink-0">
+                <!-- Tombol CTA Header -->
+                <a href="#download" class="bg-white text-neutral-950 hover:bg-neutral-200 px-3 py-1.5 sm:px-5 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition whitespace-nowrap">Get Template</a>
 
-                <!-- Tombol Hamburger Menu (Aktif di HP & Tablet < 1024px) -->
+                <!-- Tombol Hamburger Menu (HP & Tablet) -->
                 <button id="menu-btn" aria-label="Toggle Navigation" class="lg:hidden text-neutral-400 hover:text-white focus:outline-none p-1 shrink-0">
                     <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -46,7 +46,7 @@
             </div>
         </div>
 
-        <!-- Menu Dropdown untuk HP & Tablet -->
+        <!-- Menu Dropdown Mobile & Tablet -->
         <nav id="mobile-menu" class="hidden lg:hidden bg-neutral-950/95 border-b border-neutral-800 px-6 py-4 space-y-3 backdrop-blur-md">
             <a href="#industries" class="block text-sm text-neutral-400 hover:text-white transition py-1">Industries</a>
             <a href="#solutions" class="block text-sm text-neutral-400 hover:text-white transition py-1">Solutions</a>
@@ -56,21 +56,18 @@
     </header>
 
     <!-- ==========================================
-         HERO SECTION (EDIT MAIN HEADLINE HERE)
+         HERO SECTION
          ========================================== -->
-    <section class="pt-28 pb-16 sm:pt-36 sm:pb-20 md:pt-48 md:pb-24 px-4 sm:px-6 relative">
+    <section class="pt-28 pb-16 sm:pt-36 sm:pb-20 md:pt-48 md:pb-24 px-4 sm:px-6 relative w-full max-w-full overflow-hidden">
         <div class="max-w-7xl mx-auto">
-            <!-- [EDIT]: Ubah badge teks status di sini -->
             <div class="inline-flex items-center space-x-2 bg-neutral-900 border border-neutral-800 px-3 py-1.5 rounded-full text-xs text-neutral-300 mb-6">
                 <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                 <span>Tailwind CSS HTML Template</span>
             </div>
             
-            <!-- [EDIT]: Judul utama (H1) - Ukuran font responsif bertahap -->
             <h1 class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight max-w-4xl break-words">
                 The ultimate digital template for modern small businesses.
             </h1>
-            <!-- [EDIT]: Paragraf deskripsi singkat -->
             <p class="text-neutral-400 text-base sm:text-lg md:text-xl max-w-2xl mt-4 sm:mt-6">
                 A clean, high-performance, and fully responsive web template designed for agencies, local businesses, and modern brand showcases.
             </p>
@@ -78,18 +75,16 @@
     </section>
 
     <!-- ==========================================
-         INDUSTRIES SECTION (FOOD, RETAIL, SERVICES, CRAFT, DIGITAL)
+         INDUSTRIES SECTION
          ========================================== -->
-    <section id="industries" class="py-16 sm:py-20 px-4 sm:px-6 border-t border-neutral-900 bg-neutral-900/20">
+    <section id="industries" class="py-16 sm:py-20 px-4 sm:px-6 border-t border-neutral-900 bg-neutral-900/20 w-full max-w-full overflow-hidden">
         <div class="max-w-7xl mx-auto">
             <div class="mb-8 sm:mb-12">
                 <span class="text-xs font-mono text-neutral-500 uppercase tracking-widest">Multi-Niche Ready</span>
                 <h2 class="text-2xl sm:text-3xl font-bold mt-1">Tailored for Any Industry</h2>
             </div>
 
-            <!-- [EDIT]: Grid Kategori Industri Responsif (HP: 1 kolom, Tablet: 2-3 kolom, PC: 5 kolom) -->
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-6">
-                
                 <!-- 1. Food & Cafe -->
                 <div class="p-5 sm:p-6 bg-neutral-900/80 rounded-2xl border border-neutral-800 hover:border-emerald-500/50 transition group cursor-pointer">
                     <div class="text-emerald-400 font-mono text-xs uppercase tracking-widest mb-3">01 / Niche</div>
@@ -124,7 +119,6 @@
                     <h3 class="text-lg font-semibold mb-2 group-hover:text-blue-300 transition">Digital Studio</h3>
                     <p class="text-neutral-400 text-xs leading-relaxed">Great for creative agencies, developers, and digital freelancers.</p>
                 </div>
-
             </div>
         </div>
     </section>
@@ -132,7 +126,7 @@
     <!-- ==========================================
          SOLUTIONS / PORTFOLIO SECTION
          ========================================== -->
-    <section id="solutions" class="py-16 sm:py-20 px-4 sm:px-6">
+    <section id="solutions" class="py-16 sm:py-20 px-4 sm:px-6 w-full max-w-full overflow-hidden">
         <div class="max-w-7xl mx-auto">
             <div class="flex justify-between items-end mb-8 sm:mb-12">
                 <div>
@@ -179,7 +173,7 @@
     <!-- ==========================================
          FEATURES SECTION
          ========================================== -->
-    <section id="features" class="py-16 sm:py-20 px-4 sm:px-6 border-t border-neutral-900 bg-neutral-900/30">
+    <section id="features" class="py-16 sm:py-20 px-4 sm:px-6 border-t border-neutral-900 bg-neutral-900/30 w-full max-w-full overflow-hidden">
         <div class="max-w-7xl mx-auto">
             <span class="text-xs font-mono text-neutral-500 uppercase tracking-widest">Core Features</span>
             <h2 class="text-2xl sm:text-3xl font-bold mt-1 mb-8 sm:mb-12">Built for speed and flexibility</h2>
@@ -204,7 +198,7 @@
     <!-- ==========================================
          ABOUT / OVERVIEW SECTION
          ========================================== -->
-    <section id="about" class="py-16 sm:py-20 px-4 sm:px-6 border-t border-neutral-900">
+    <section id="about" class="py-16 sm:py-20 px-4 sm:px-6 border-t border-neutral-900 w-full max-w-full overflow-hidden">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 items-center">
             <div>
                 <span class="text-xs font-mono text-neutral-500 uppercase tracking-widest">Product Details</span>
@@ -232,7 +226,7 @@
     <!-- ==========================================
          TESTIMONIALS SECTION
          ========================================== -->
-    <section id="testimonials" class="py-16 sm:py-20 px-4 sm:px-6 border-t border-neutral-900 bg-neutral-900/30">
+    <section id="testimonials" class="py-16 sm:py-20 px-4 sm:px-6 border-t border-neutral-900 bg-neutral-900/30 w-full max-w-full overflow-hidden">
         <div class="max-w-7xl mx-auto">
             <span class="text-xs font-mono text-neutral-500 uppercase tracking-widest">Testimonials</span>
             <h2 class="text-2xl sm:text-3xl font-bold mt-1 mb-8 sm:mb-12">Loved by developers & designers</h2>
@@ -259,7 +253,7 @@
     <!-- ==========================================
          FOOTER / CALL TO ACTION
          ========================================== -->
-    <footer id="download" class="py-16 sm:py-20 px-4 sm:px-6 border-t border-neutral-900 text-center">
+    <footer id="download" class="py-16 sm:py-20 px-4 sm:px-6 border-t border-neutral-900 text-center w-full max-w-full overflow-hidden">
         <div class="max-w-3xl mx-auto space-y-6">
             <h2 class="text-2xl sm:text-4xl md:text-5xl font-bold">Ready to build your next project?</h2>
             <p class="text-neutral-400 text-sm sm:text-base">Get this template and start launching beautiful websites today.</p>
